@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "4.2.5.2"
+gem "rails", "4.2.6"
 
 # Legacy Rails features, remove me!
 # responders (class level)
@@ -8,7 +8,7 @@ gem "responders", "2.1.1"
 
 # Appserver
 
-gem "unicorn", "5.0.1", require: false
+gem "unicorn", "5.0.1", require: false, platform: :ruby
 
 # Federation
 
@@ -18,7 +18,7 @@ gem "diaspora_federation-rails", "0.0.12"
 
 gem "acts_as_api", "0.4.2"
 gem "json",        "1.8.3"
-gem "json-schema", "2.6.0"
+gem "json-schema", "2.6.1"
 
 # Authentication
 
@@ -32,7 +32,7 @@ gem "simple_captcha2", "0.4.0", require: "simple_captcha"
 
 # Background processing
 
-gem "sidekiq", "4.1.0"
+gem "sidekiq", "4.1.1"
 gem "sinatra", "1.4.7"
 
 # Scheduled processing
@@ -54,7 +54,7 @@ gem "rack-cors", "0.4.0", require: "rack/cors"
 # CSS
 
 gem "bootstrap-sass", "3.3.6"
-gem "compass-rails",  "2.0.5"
+gem "compass-rails",  "3.0.2"
 gem "sass-rails",     "5.0.4"
 gem "autoprefixer-rails", "6.3.3.1"
 gem "bootstrap-switch-rails", "3.3.3"
@@ -68,7 +68,7 @@ group :postgresql, optional: true do
   gem "pg",     "0.18.4"
 end
 
-gem "activerecord-import", "0.11.0"
+gem "activerecord-import", "0.12.0"
 
 # File uploading
 
@@ -127,13 +127,13 @@ gem "markerb",             "1.1.0"
 gem "messagebus_ruby_api", "1.0.3"
 
 # Map
-gem "leaflet-rails",       "0.7.4"
+gem "leaflet-rails",       "0.7.7"
 
 # Parsing
 
 gem "nokogiri",          "1.6.7.2"
 gem "redcarpet",         "3.3.4"
-gem "twitter-text",      "1.13.3"
+gem "twitter-text",      "1.13.4"
 gem "roxml",             "3.1.6"
 gem "ruby-oembed",       "0.9.0"
 gem "open_graph_reader", "0.6.1"
@@ -173,10 +173,10 @@ gem "typhoeus",           "0.8.0"
 # Views
 
 gem "gon",                     "6.0.1"
-gem "hamlit",                  "2.2.1"
+gem "hamlit",                  "2.2.2"
 gem "mobile-fu",               "1.3.1"
 gem "will_paginate",           "3.1.0"
-gem "rails-timeago",           "2.11.0"
+gem "rails-timeago",           "2.11.1"
 
 # Logging
 
@@ -184,7 +184,7 @@ gem "logging-rails", "0.5.0", require: "logging/rails"
 
 # Reading and writing zip files
 
-gem "rubyzip", "1.1.7", require: "zip"
+gem "rubyzip", "1.2.0", require: "zip"
 
 # Prevent occasions where minitest is not bundled in
 # packaged versions of ruby. See following issues/prs:
@@ -218,7 +218,7 @@ group :production do # we don"t install these on travis to speed up test runs
 
   # Process management
 
-  gem "eye", "0.8"
+  gem "eye", "0.8", platform: :ruby
 
   # Redirects
 
@@ -244,17 +244,17 @@ group :development do
   gem "jshintrb",       "0.3.0"
   gem "rubocop",        "0.35.1"
   gem "haml_lint",      "0.15.2"
-  gem "pronto",         "0.5.3"
-  gem "pronto-jshint",  "0.5.0"
-  gem "pronto-rubocop", "0.5.0"
-  gem "pronto-haml",    "0.5.0"
-  gem "pronto-scss",    "0.5.0", require: false
+  gem "pronto",         "0.5.3", platform: :ruby
+  gem "pronto-jshint",  "0.5.0", platform: :ruby
+  gem "pronto-rubocop", "0.5.0", platform: :ruby
+  gem "pronto-haml",    "0.5.0", platform: :ruby
+  gem "pronto-scss",    "0.5.0", require: false, platform: :ruby
 
   # Preloading environment
 
-  gem "spring", "1.6.3"
-  gem "spring-commands-rspec", "1.0.4"
-  gem "spring-commands-cucumber", "1.0.1"
+  gem "spring", "1.6.4", platform: :ruby
+  gem "spring-commands-rspec", "1.0.4", platform: :ruby
+  gem "spring-commands-cucumber", "1.0.1", platform: :ruby
 
   # Debugging
   gem "pry"
@@ -310,3 +310,6 @@ group :development, :test do
   # silence assets
   gem "quiet_assets", "1.1.0"
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
