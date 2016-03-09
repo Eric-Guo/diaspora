@@ -4,7 +4,7 @@ gem "rails", "4.2.6"
 
 # Legacy Rails features, remove me!
 # responders (class level)
-gem "responders", "2.1.1"
+gem "responders", "~> 2.1.2"
 
 # Appserver
 
@@ -56,7 +56,7 @@ gem "rack-cors", "0.4.0", require: "rack/cors"
 gem "bootstrap-sass", "3.3.6"
 gem "compass-rails",  "3.0.2"
 gem "sass-rails",     "5.0.4"
-gem "autoprefixer-rails", "6.3.3.1"
+gem "autoprefixer-rails", "~> 6.3.4"
 gem "bootstrap-switch-rails", "3.3.3"
 
 # Database
@@ -74,7 +74,7 @@ gem "activerecord-import", "0.12.0"
 
 gem "carrierwave", "0.10.0"
 gem "fog",         "1.37.0"
-gem "mini_magick", "4.4.0"
+gem "mini_magick", "4.5.0"
 gem "remotipart",  "1.2.1"
 
 # GUID generation
@@ -88,7 +88,7 @@ gem "entypo-rails", "3.0.0.pre.rc2"
 
 gem "backbone-on-rails", "1.2.0.0"
 gem "handlebars_assets", "0.23.0"
-gem "jquery-rails",      "4.1.0"
+gem "jquery-rails",      "4.1.1"
 gem "jquery-ui-rails",   "5.0.5"
 gem "js_image_paths",    "0.1.0"
 gem "js-routes",         "1.2.4"
@@ -173,7 +173,7 @@ gem "typhoeus",           "0.8.0"
 # Views
 
 gem "gon",                     "6.0.1"
-gem "hamlit",                  "2.2.2"
+gem "hamlit",                  "2.2.3"
 gem "mobile-fu",               "1.3.1"
 gem "will_paginate",           "3.1.0"
 gem "rails-timeago",           "2.11.1"
@@ -265,6 +265,7 @@ group :development do
   gem "simplecov", "0.11.2", require: false
 
   gem "turbo_dev_assets", "0.0.2"
+  gem 'puma'
 end
 
 group :test do
