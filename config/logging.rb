@@ -31,8 +31,7 @@ Logging::Rails.configure do |config|
   Logging.appenders.stdout("stdout",
                            auto_flushing: true,
                            layout:        Logging.layouts.pattern(
-                             pattern:      pattern,
-                             color_scheme: "bright"
+                             pattern:      pattern
                            )
                           ) if config.log_to.include? "stdout"
 
