@@ -85,3 +85,5 @@ diaspora.iml
 
 # Dolphin's directory's preferences files
 *.directory
+
+diaspora.sublime-workspace
