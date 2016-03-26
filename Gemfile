@@ -12,7 +12,7 @@ gem "unicorn", "5.0.1", require: false, platform: :ruby
 
 # Federation
 
-gem "diaspora_federation-rails", "0.0.12"
+gem "diaspora_federation-rails", "0.0.13"
 
 # API and JSON
 
@@ -72,9 +72,9 @@ gem "activerecord-import", "0.12.0"
 
 # File uploading
 
-gem "carrierwave", "0.10.0"
-gem "fog",         "1.37.0"
-gem "mini_magick", "4.5.0"
+gem "carrierwave", "~> 0.11.0"
+gem "fog",         "~> 1.38.0"
+gem "mini_magick", "~> 4.5.1"
 gem "remotipart",  "1.2.1"
 
 # GUID generation
@@ -91,7 +91,7 @@ gem "handlebars_assets", "0.23.0"
 gem "jquery-rails",      "4.1.1"
 gem "jquery-ui-rails",   "5.0.5"
 gem "js_image_paths",    "0.1.0"
-gem "js-routes",         "1.2.4"
+gem "js-routes",         "~> 1.2.5"
 
 source "https://rails-assets.org" do
   gem "rails-assets-jquery",                              "1.12.0" # Should be kept in sync with jquery-rails
@@ -152,7 +152,7 @@ gem "openid_connect", "0.10.0"
 
 # Serializers
 
-gem "active_model_serializers", "0.9.4"
+gem "active_model_serializers", "~> 0.9.5"
 
 # XMPP chat dependencies
 gem "diaspora-vines",             "~> 0.2.0.develop"
@@ -168,7 +168,6 @@ gem "addressable",        "2.3.8", require: "addressable/uri"
 gem "faraday",            "0.9.2"
 gem "faraday_middleware", "0.10.0"
 gem "faraday-cookie_jar", "0.0.6"
-gem "typhoeus",           "0.8.0"
 
 # Views
 
@@ -292,7 +291,7 @@ group :test do
   gem "webmock",            "1.22.6", require: false
   gem "shoulda-matchers",   "3.1.1"
 
-  gem "diaspora_federation-test", "0.0.12"
+  gem "diaspora_federation-test", "0.0.13"
 end
 
 group :development, :test do
